@@ -1,0 +1,21 @@
+DATABASE ASSIGNMENT 2
+USING THE SELECT STATEMENT 
+PS: could not access the assignment on github but tried to elaborate my understanding od the class. 
+
+1. Utilize the SELECT statement to retrieve data from the Expense Tracker database
+SELECT amount='50000', category='rent' FROM expenses;
+SELECT amount<='10000', category = 'entertainment' FROM expenses;
+
+2. Apply wildcards% and comparison operators for targeted data retrieval
+SELECT * FROM expenses WHERE description LIKE '% transport %';
+SELECT * FROM expenses WHERE description LIKE '% household shopping %';
+SELECT * FROM expenses WHERE amount <= 20000;
+SELECT * FROM expenses WHERE amount > 100000;
+
+3. Employ the WHERE clause with logical operators (AND, OR, NOT) to filter data effectively
+SELECT * FROM expenses WHERE description like '% household shopping %' AND amount >=20000;
+SELECT * FROM expenses WHERE category='school fees' OR category='vacation';
+SELECT * FROM expenses WHERE category NOT LIKE '% personal grooming %';
+
+4. Organize retrieved data using the ORDER BY clause
+SELECT * FROM expenses ORDER BY category ASC, date DESC;
